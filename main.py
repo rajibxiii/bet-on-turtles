@@ -7,21 +7,15 @@ bet = screen.textinput(title="Make a bet", prompt="Which turtle will win the rac
 print(bet)
 
 turtles = []
+colors = ["red", "green", "blue", "pink", "orange"]
 
+y_cor = -100
 for i in range (5):
     turtle_object = Turtle(shape="turtle")
-    turtle_object.color()
+    turtle_object.color(colors[i])
+    turtle_object.penup()
+    turtle_object.goto(x=-250, y=y_cor)
     turtles.append(turtle_object)
-
-
-turt1.goto(x=-250, y=-100)
-
-
-
-
-
-
-
-
+    y_cor += 50
 
 screen.exitonclick()
